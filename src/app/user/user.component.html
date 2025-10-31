@@ -1,0 +1,33 @@
+<app-card>
+    <!-- (click) = is a event binding -->
+  <button [class.active]="selected" (click)="onSelectUser()">
+    <img
+        [src]="imagePath"
+        [alt]="user.name"
+    />
+     <span>{{ user.name }}</span>
+  </button>
+</app-card>
+
+<!-- <div> -->
+    <!-- (click) = is a event binding -->
+  <!-- <button (click)="onSelectUser()"> -->
+    <!--
+        Two ways for attribute binding for src (almost like inline)
+        1. [src]="'../assets/users/'+ selectedUser.avatar" 
+        2. src="{{ selectedUsesr.avatar }}"
+    -->
+    <!-- 
+      This is used without signal:
+      <img
+          [src]="imagePath"
+          [alt]="selectedUser.name"
+      />
+      <span>{{ selectedUser.name }}</span> -->
+    <!-- <img
+        [src]="imagePath()"
+        [alt]="selectedUser().name"
+    />
+     <span>{{ selectedUser().name }}</span> -->
+  <!-- </button>
+</div> -->
